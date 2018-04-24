@@ -13,7 +13,7 @@ class FighterAdmin(admin.ModelAdmin):
 
 class CombatAdmin(admin.ModelAdmin):
     list_display = ['__str__', 'tournament', 'date', 'winner']
-    search_fields = ['fighter1', 'fighter2']
+    search_fields = ['winner', 'loser']
     list_filter = ['tournament', 'date']
 
 admin.site.register(Tournament, TournamentAdmin)
