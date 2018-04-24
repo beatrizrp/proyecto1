@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        {% load static %}
+
+        <h1>Torneos</h1>
+
+        <ul>
+            {% for t in tournaments %}
+                <li>
+                    <p>{{ t.name }}</p>
+                    <ul>
+                        {% for f in t.fighters.all %}
+                            <li>{{ f.alias }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+
+
+        <h1>Combates</h1>
+
+        <ul>
+            {% for c in combats %}
+                <li>{{  c.date }} || {{ c.winner.alias }} vs {{ c.loser.alias }} </li>
+            {% endfor %}
+        </ul>
+
+
+        <h1> Ranking Luchadores</h1>
+
+        <ul>
+            {% for f in fighters %}
+                <li>({{ f.alias }} - {{ f.alias }} combates ganados)</li>
+            {% endfor %}
+        </ul>
+
+        <img src="(% static "imagen.png" width = 150px%)>
+        <img src="(% static "sub/imagen2.jpg" width = 150px %)>
+        <img src="(% static "user.png" width = 150px %)>
+
+    </body>
+</html>
