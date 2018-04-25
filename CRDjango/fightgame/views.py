@@ -54,11 +54,8 @@ class CombatViewSet(viewsets.ModelViewSet):
 
 
 """ Ejemplos:
-
 def fighters(request):
     return HttpResponse('Luchadores')
-
 def combats(request):
     return HttpResponse('Combates')
-
 """

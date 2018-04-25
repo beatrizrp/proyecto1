@@ -6,14 +6,14 @@ from .models import *
 class TournamentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Tournament
-        fields = ('name', 'start_date', 'finish_date', 'category')
+        fields = ('id','name', 'start_date', 'finish_date', 'category')
 
 class CombatSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Combat
-        fields = ('date', 'loser', 'winner')
+        fields = ('id','tournament','date', 'loser', 'winner')
 
 class FighterSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Fighter
-        fields = ('alias', 'sakills', 'force', 'resistance')
+        fields = ('id','alias', 'skills', 'force', 'resistance', 'gender')

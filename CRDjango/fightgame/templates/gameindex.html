@@ -1,12 +1,14 @@
-<html>
-    <head>
+{% load static %}
 
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game index</title>
+</head>
+<body>
 
-        {% load static %}
-
-        <h1>Torneos</h1>
+<h1>Torneos</h1>
 
         <ul>
             {% for t in tournaments %}
@@ -37,11 +39,10 @@
             {% for f in fighters %}
                 <li>({{ f.alias }} - {{ f.alias }} combates ganados)</li>
             {% endfor %}
-        </ul>
 
-        <img src="(% static "imagen.png" width = 150px%)>
-        <img src="(% static "sub/imagen2.jpg" width = 150px %)>
-        <img src="(% static "user.png" width = 150px %)>
+<img src="{% static "imagen.png" %}" width="100"/>
+<img src="{% static "sub/image2.jpg" %}" width="100"/>
+<img src="{% static "user.png" %}" width="100"/>
 
-    </body>
+</body>
 </html>
